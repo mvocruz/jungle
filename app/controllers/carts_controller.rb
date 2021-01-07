@@ -1,6 +1,9 @@
 class CartsController < ApplicationController
 
   def show
+    if cart.size <= 0
+      redirect_to '/empty'
+    end  
   end
 
   def add_item
